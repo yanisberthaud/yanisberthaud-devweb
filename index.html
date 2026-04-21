@@ -12,19 +12,25 @@
 <body>
 
   <nav>
-    <div class="nav-logo">
-      <a href="index.html"> <img src="images/logo_blanc.png" alt="Logo" /> </a>
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="#apropos">À Propos</a></li>
-      <li><a href="#parcours">Parcours</a></li>
-      <li><a href="#competences">Compétences</a></li>
-      <li><a href="#projets">Projets</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <div class="nav-logo">
+    <a href="index.html"><img src="images/logo_blanc.png" alt="Logo" /></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#apropos">À Propos</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
     <a href="#contact" class="btn-hire-nav">Me Recruter</a>
-  </nav>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
 
   <section class="hero">
     <div class="hero-left">
@@ -484,6 +490,24 @@
     </div>
 </section>
 
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.querySelector('.nav-links');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');  
+    navLinks.classList.toggle('open');
+  });
+
+  // Ferme le menu quand on clique sur un lien
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('open');
+      navLinks.classList.remove('open');
+    });
+  });
+</script>
+
 </body>
 
 <footer>
@@ -544,7 +568,7 @@
   </div>
 
   <div class="footer-bottom">
-    <p>© 2025 Yanis Berthaud. Tous droits réservés.</p>
+    <p>© 2026 Yanis Berthaud. Tous droits réservés.</p>
     <p>Conçu & Développé par <span>Yanis Berthaud</span></p>
   </div>
 </footer>
