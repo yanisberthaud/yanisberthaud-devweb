@@ -1339,6 +1339,10 @@ footer {
   text-decoration: underline;
 }
 
+.project-img.white-bg {
+  background: #ffffff;
+}
+
 /* ===================== RESPONSIVE ===================== */
 
 /* TABLETTE — 1024px */
